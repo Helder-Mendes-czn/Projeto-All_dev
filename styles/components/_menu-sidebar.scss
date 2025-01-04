@@ -1,0 +1,32 @@
+@use '../base/variables';
+
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .menu-sidebar__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .menu-sidebar__list-item{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            & > div{
+                border-radius: 1rem;
+                padding: 1rem;
+                background-color: variables.$blue-300;
+            }
+
+            
+        }
+        .unselect{
+            opacity: 16%;
+        }
+    }
+}
