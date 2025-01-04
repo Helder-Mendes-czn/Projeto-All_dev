@@ -1,3 +1,13 @@
 @use './base/reset';
 @use './base/variables';
 @use './components/header';
+@use './components/menu-sidebar';
+@use './layout/container';
+
+h2{
+    line-height: variables.$line-height-sidebar-title;
+    letter-spacing: 4px;
+    font-size: variables.$font-size-l;
+    font-weight: 400;
+}
+
