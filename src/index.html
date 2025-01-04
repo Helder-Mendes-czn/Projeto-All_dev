@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/style.css">
+
 </head>
 <body>
     <header>
@@ -12,8 +13,66 @@
         <input type="search" placeholder="Busque por algo" class="header__input">
         <div class="header__perfil">
             <img src="../assets/perfil-logo.jpeg" alt="" class="header__perfil-logo">
-            <span class="header__perfil-nome">CZN</span>
+            <span class="header__perfil-nome">Helder</span>
         </div>
     </header>
+
+    <div class="container">
+        <div class="first">
+            <h2>MENU</h2>
+            <ul class="menu-sidebar__list">
+                <li class="menu-sidebar__list-item">
+                    <div><i class="fa-solid fa-code"></i></div>
+                    <span>Editor de código</span>
+                </li>
+                <li class="menu-sidebar__list-item unselect">
+                    <div><i class="fa-solid fa-users"></i></div>
+                    <span>Comunidade</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="second">
+            <div class="code-editor__area">
+                <div class="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <textarea>Seu código</textarea>
+            </div>
+            <button class="code-editor__button">Visualizar com o highhlight</button>
+        </div>
+
+        <div class="third">
+            <div class="project">
+                <h2>SEU PROJETO</h2>
+                <input type="text" placeholder="Nome do seu projeto">
+                <input type="text" placeholder="Descrição do seu projeto">
+            </div>
+            <div class="project-custom">
+                <h2>Personalização</h2>
+                <select>
+                    <option>JavaScript</option>
+                    <option>Java</option>
+                    <option>Rust</option>
+                    <option>PHP</option>
+                    <option>C</option>
+                    <option>C#</option>
+                    <option>C++</option>
+                    <option>Python</option>
+                    <option>Ruby</option>
+                </select>
+                <div>
+                    <label for="colorPicker"></label>
+                    <input type="color" id="colorPicker" name="colorPicker" value="#00aaff">
+                </div>
+            </div>
+
+            <button class="project-button">Salvar projeto</button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/cb103fc3d8.js" crossorigin="anonymous"></script>
 </body>
 </html>
