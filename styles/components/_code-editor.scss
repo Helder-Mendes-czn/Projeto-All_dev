@@ -1,0 +1,100 @@
+@use '../base/variables';
+
+.second{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-left: 6rem;
+
+    .code-editor{
+        border-radius: .5rem;
+        padding: 2rem;
+        background-color: variables.$blue-250;
+        height: 566px;
+
+        .code-editor__area{
+            padding: 2rem;
+            background-color: variables.$dark-gray;
+            height: 88%;
+            border-radius: .5rem;
+            display: flex;
+            flex-direction: column;
+    
+            .circles{
+                display: flex;
+                gap: .5rem;
+                
+                .circle{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    border-radius: 50%;
+                    background-color: aliceblue;
+                    color: transparent;
+
+                    &:nth-child(1){
+                        background-color: variables.$mac-red;
+                    }
+
+                    &:nth-child(2){
+                        background-color: variables.$mac-yellow;
+                    }
+
+                    &:nth-child(3){
+                        background-color: variables.$mac-green;
+                    }
+                }
+            }
+    
+            textarea{
+                border: black;
+                border-radius: 1rem;
+                margin-top: 1rem;
+                padding: .2rem;
+                font-family: variables.$font-family;
+                font-size: variables.$font-size-s;
+                line-height: variables.$line-height-body;
+                color: variables.$white;
+                resize: none;
+                height: 100%;
+                background-color: variables.$dark-gray;
+
+               &::-webkit-scrollbar{
+                    border-radius: 0 1rem 1rem 0;
+                    background-color: variables.$blue-350;
+                    width: 5px;
+               }
+
+               &::-webkit-scrollbar-thumb{
+                    background-color: variables.$blue-100;
+                    border-radius: 1rem;
+               }
+            }
+        }
+    }
+
+    .code-editor__button{
+        border: none;
+        width: 100%;
+        background-color: variables.$blue-450;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        font-size: variables.$font-size-m;
+        color: variables.$white;
+        cursor:url('../assets/cursor-pointer.png'), auto;
+        padding: 1.5rem;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            background-color: variables.$blue-425;
+            transition: all .3s ease-in-out;
+        }
+
+        &:focus{
+            background-color: variables.$blue-375;
+        }
+    }
+    
+}
+
