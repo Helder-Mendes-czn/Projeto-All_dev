@@ -10,7 +10,7 @@
 <body>
     <header>
         <img src="../assets/logo-All-dev.png" alt="" class="header__logo">
-        <input type="search" placeholder="Busque por algo" class="header__input">
+        <input type="search" placeholder="Busque por algo" class="header__input input">
         <div class="header__perfil">
             <img src="../assets/perfil-logo.jpeg" alt="" class="header__perfil-logo">
             <span class="header__perfil-nome">Helder</span>
@@ -33,29 +33,57 @@
         </div>
 
         <div class="second">
-            <div class="code-editor__area">
-                <div class="circles">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+            <div class="code-editor">
+                <div class="code-editor__area">
+                    <div class="circles">
+                        <div class="circle">1</div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <textarea>
+let total_trfs = 0
+function concluirTarefa(btn){
+    let trfs_conc = document.querySelector('.tarefas_concluidas')
+    let li = btn.parentElement
+    li.innerHTML = `
+    <span>${li.querySelector('span').textContent}</span>
+    <button id="btn_excl">Remover</button>
+    `
+    trfs_conc.append(li)
+
+    let button = li.querySelector('button')
+    button.addEventListener('click', function(){
+        excluirTarefa(this)
+    })
+    atualizarTotais()
+}
+
+function excluirTarefa(btn){
+    let trfs_excl = document.querySelector('.tarefas_excluidas')
+    let li = btn.parentElement
+    li.innerHTML = `
+    <span>${li.querySelector('span').textContent}</span>
+    `
+    trfs_excl.append(li)
+    atualizarTotais()
+}</textarea>
                 </div>
-                <textarea>Seu código</textarea>
             </div>
-            <button class="code-editor__button">Visualizar com o highhlight</button>
+            <button class="code-editor__button">Visualizar com o highlight</button>
         </div>
 
         <div class="third">
             <div class="project">
                 <h2>SEU PROJETO</h2>
-                <input type="text" placeholder="Nome do seu projeto">
-                <input type="text" placeholder="Descrição do seu projeto">
+                <input type="text" class="input" placeholder="Nome do seu projeto">
+                <input type="text" class="input" placeholder="Descrição do seu projeto">
             </div>
             <div class="project-custom">
                 <h2>Personalização</h2>
-                <select>
-                    <option>JavaScript</option>
-                    <option>Java</option>
-                    <option>Rust</option>
+                <select class="input">
+                    <option><i class="fa-brands fa-js" style="color: #eec42b;"></i> JavaScript</option>
+                    <option><i class="fa-brands fa-java" style="color: #90c8f4;"></i> Java</option>
+                    <option><i class="fa-brands fa-rust" style="color: #000000;"></i> Rust</option>
                     <option>PHP</option>
                     <option>C</option>
                     <option>C#</option>
@@ -65,7 +93,7 @@
                 </select>
                 <div>
                     <label for="colorPicker"></label>
-                    <input type="color" id="colorPicker" name="colorPicker" value="#00aaff">
+                    <input type="color" id="colorPicker" name="colorPicker" value="#69cefb">
                 </div>
             </div>
 
