@@ -1,0 +1,82 @@
+@use '../base/variables';
+
+.third{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .input{
+        width: 105%;
+        border-radius: .5rem;
+        padding: .875rem;
+
+        &:last-child{
+            height: 80px;
+        
+        }
+    }
+
+    .project{
+        padding: 0 2rem 0rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .project-custom{
+        padding: 0 2rem 0rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .input{
+            cursor:url('../assets/cursor-default.png'), auto;
+            width: 113%;
+            padding: 1rem;
+        }
+
+        select{
+            option{
+                cursor:url('../assets/cursor-default.png'), auto;
+
+                &:hover{
+                    background-color: variables.$dark-gray;
+                }
+            }
+        }
+
+        & > div{
+            border: 1px solid variables.$white;
+            padding: .6rem;
+            border-radius: .5rem;
+            width: 107%;
+            
+            input{
+                border: none;
+                background-color: transparent;
+                width: 100%;
+                height: 50px;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+.project-button{
+    border: none;
+    cursor:url('../assets/cursor-pointer.png'), auto;
+    background-color: variables.$blue-300;
+    border-radius: .5rem;
+    padding: 1.5rem 0;
+    width: 104%;
+    font-weight: 500;
+    font-size: variables.$font-size-l;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        background-color: variables.$blue-200;
+        color: variables.$dark-gray;
+        transition: all .3s ease-in-out;
+    }
+}
+
