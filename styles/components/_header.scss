@@ -12,22 +12,14 @@ header{
     }
 
     .header__input{
-        border: none;
-        border-radius: .5rem;
-        width: 100%;
         font-size: variables.$font-size-m;
-        color: variables.$white;
-        background-color: variables.$blue-400;
-        padding: 1.5rem;
 
         &::placeholder{
             font-size: variables.$font-size-m;
             color: variables.$white;
             opacity: 16%;
-        }
 
-        &:hover{
-            background-color: variables.$blue-350;
+            
         }
     }
 
@@ -39,6 +31,7 @@ header{
         padding: 1rem;
         border-radius: .5rem;
         gap: 1.5rem;
+        transition: all .3s ease-in-out;
 
         .header__perfil-logo{
             border-radius: 50%;
@@ -50,7 +43,7 @@ header{
         }
 
         &:hover{
-            cursor: pointer;
+            cursor:url('../assets/cursor-pointer.png'), auto;
             background-color: variables.$blue-350;
             transition: all .3s ease-in-out;
         }
