@@ -9,24 +9,32 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: .0.5rem;
 
         .menu-sidebar__list-item{
-            cursor: pointer;
+            cursor:url('../assets/cursor-pointer.png'), auto;
             display: flex;
             align-items: center;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
             gap: 1rem;
-
+            transition: all .3s ease-in-out;
             & > div{
                 border-radius: 1rem;
                 padding: 1rem;
                 background-color: variables.$blue-300;
-            }
+            }           
 
-            
+            &:hover{
+                box-shadow: 0 0 5px 0px variables.$blue-300;
+                transition: all .3s ease-in-out;
+            }
         }
         .unselect{
             opacity: 16%;
+            &:hover{
+                opacity: 1;
+            }
         }
     }
 }
