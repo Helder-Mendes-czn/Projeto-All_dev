@@ -1,0 +1,20 @@
+@use '../base/variables';
+
+footer{
+    background-color: variables.$dark-gray;
+    opacity: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    @media screen and (max-width:480px) {
+        font-size: variables.$font-size-m;
+        text-align: center;               
+    }
+
+    @media screen and (max-width:320px) {
+        font-size: variables.$font-size-s;
+    }
+}
