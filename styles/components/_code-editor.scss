@@ -3,15 +3,30 @@
 .second{
     width: 55%;
     display: flex;
+    // display: none;
     flex-direction: column;
     gap: 1.4rem;
     margin-left: 6rem;
+
+    @media screen and (max-width:1600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    @media screen and (max-width:320px) {
+        width: 115%;       
+    }
 
     .code-editor{
         border-radius: .5rem;
         padding: 2rem;
         background-color: variables.$blue-250;
         height: 566px;
+
+        @media screen and (max-width:320px) {
+            height: 480px;
+            padding: 1rem;   
+        }
 
         .code-editor__area{
             padding: 2rem;
@@ -20,30 +35,10 @@
             border-radius: .5rem;
             display: flex;
             flex-direction: column;
-    
-            .circles{
-                display: flex;
-                gap: .5rem;
-                
-                .circle{
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    border-radius: 50%;
-                    background-color: aliceblue;
-                    color: transparent;
 
-                    &:nth-child(1){
-                        background-color: variables.$mac-red;
-                    }
-
-                    &:nth-child(2){
-                        background-color: variables.$mac-yellow;
-                    }
-
-                    &:nth-child(3){
-                        background-color: variables.$mac-green;
-                    }
-                }
+            @media screen and (max-width:320px) {
+                padding: .6rem;
+                height: 97%;
             }
     
             textarea{
@@ -68,6 +63,10 @@
                &::-webkit-scrollbar-thumb{
                     background-color: variables.$blue-100;
                     border-radius: 1rem;
+               }
+
+               @media screen and (max-width:320px) {
+                font-size: variables.$font-size-xs;
                }
             }
         }
@@ -94,7 +93,35 @@
         &:focus{
             background-color: variables.$blue-375;
         }
+
+        @media screen and (max-width:320px) {
+            font-size: variables.$font-size-s;   
+        }
     }
     
 }
 
+.circles{
+    display: flex;
+    gap: .5rem;
+    
+    .circle{
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: aliceblue;
+        color: transparent;
+
+        &:nth-child(1){
+            background-color: variables.$mac-red;
+        }
+
+        &:nth-child(2){
+            background-color: variables.$mac-yellow;
+        }
+
+        &:nth-child(3){
+            background-color: variables.$mac-green;
+        }
+    }
+}
