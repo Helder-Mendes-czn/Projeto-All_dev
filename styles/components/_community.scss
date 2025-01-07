@@ -1,0 +1,186 @@
+@use '../base/variables';
+
+.fourth{
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    @media screen and (max-width:1600px) {
+        flex-direction: column;
+        flex-wrap: nowrap;    
+    }
+
+    .card{
+        width: 45%;
+        background-color: variables.$blue-450;
+        border-radius: 2.5rem;
+        transition: all .3s ease-in-out;
+
+        @media screen and (max-width:1600px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width:320px) {
+            width: 110%;   
+        }
+        
+
+        .card__code-editor{
+            border-radius: .5rem;
+            padding: 1.5rem;
+            background-color: variables.$mac_green;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+
+            @media screen and (max-width:480px){
+                height: 400px;
+            }
+
+            @media screen and (max-width:320px) {
+                padding: .5rem;
+                height: 300px;
+            }
+
+            .card__code-editor-area{
+                padding: .8rem;
+                border-radius: .5rem;
+                height: 464px;
+                background-color: variables.$dark-gray;
+                @media screen and (max-width:480px){
+                    height: 400px;
+                }
+
+                @media screen and (max-width:320px) {
+                    height: 300px;
+                }
+
+                textarea{
+                    cursor: url('../../assets/cursor-default.png'), auto;
+                    text-align: start;
+                    border: none;
+                    overflow: hidden;
+                    height: 95%;
+                    width: 100%;
+                    border-radius: 1rem;
+                    margin-top: 1rem;
+                    font-family: variables.$font-family;
+                    font-size: variables.$font-size-s;
+                    line-height: variables.$line-height-body;
+                    color: variables.$white;
+                    resize: none;
+                    background-color: variables.$dark-gray;
+
+                    @media screen and (max-width:480px){
+                        height: 90%;
+                    }
+                }
+            }
+        }
+
+        .card__area{
+            padding: 2rem;
+
+            @media screen and (max-width:320px) {
+                padding: .5rem 1.4rem;
+            }
+
+            .card__area-text{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .card__title{
+                    font-size: variables.$font-size-xl;
+                    font-weight: 700;
+                    line-height: variables.$line-height-title;
+
+                    @media screen and (max-width:320px) {
+                        width: 100%;
+                        font-size: variables.$font-size-m;
+                    }
+                }
+
+                .card__description{
+                    opacity: 80%;
+                    font-weight: 400;
+                    font-size: variables.$font-size-s;
+                    line-height: variables.$line-height-body;
+                }
+            }
+        }
+
+        .card__area-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width:480px) {
+                font-size: variables.$font-size-s;
+            }
+
+            @media screen and (max-width:320px) {
+                margin-top: -1rem;
+            }
+
+            .reactions{
+                display: flex;
+                gap: 1rem;
+
+                @media screen and (max-width:480px) {
+                    margin-top: 1rem;   
+                }
+                
+                span i {
+                    cursor: url('../../assets/cursor-pointer.png'), auto;
+                    transition: all .2s ease-in;
+
+                    &:hover{
+                        color: variables.$blue-250;
+                        transform: scale(1.1);
+                        transition: all .2s ease-in;
+                    }
+                }
+            }
+
+            .card__area-perfil{
+                width: 20%;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                @media (max-width:1600px) {
+                    width: 30%;
+                }
+
+                @media screen and (max-width:320px) {
+                    gap: .25rem;
+                }
+
+                .card__area-perfil-img{
+                    width: 35%;
+                    border-radius: 50%;
+                }
+
+                @media screen and (max-width:480px) {
+                    margin-top: 1rem;
+                    width: 35%;
+                    span{
+                        font-size: variables.$font-size-s;
+                    }
+                }
+            }   
+        }
+
+        &:hover{
+            transform: translateY(-15px);
+            box-shadow: 15px 15px 0px 0px variables.$blue-400;
+            transition: all .3s ease-in-out;
+        }
+        
+    }
+}
