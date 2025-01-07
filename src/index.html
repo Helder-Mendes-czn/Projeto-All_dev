@@ -11,14 +11,25 @@
     <header>
         <img src="../assets/logo-All-dev.png" alt="" class="header__logo">
         <input type="search" placeholder="Busque por algo" class="header__input input">
-        <div class="header__perfil">
+        <div class="header__perfil perfil">
             <img src="../assets/perfil-logo.jpeg" alt="" class="header__perfil-logo">
             <span class="header__perfil-nome">Helder</span>
+        </div>
+        <div class="menu-toggle-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
 
     <div class="container">
         <div class="first">
+            <div class="row-1">
+                <div class="menu__perfil perfil">
+                    <img src="../assets/perfil-logo.jpeg" alt="" class="menu__perfil-logo">
+                    <span class="menu__perfil-nome">Helder</span>
+                </div>
+                <i class="fa-solid fa-x"></i>
+            </div>
             <h2>MENU</h2>
             <ul class="menu-sidebar__list">
                 <li class="menu-sidebar__list-item">
@@ -75,8 +86,8 @@ function excluirTarefa(btn){
         <div class="third">
             <div class="project">
                 <h2>SEU PROJETO</h2>
-                <input type="text" class="input" placeholder="Nome do seu projeto">
-                <input type="text" class="input" placeholder="Descrição do seu projeto">
+                <input type="text" class="input input-text" placeholder="Nome do seu projeto">
+                <input type="text" class="input input-text" placeholder="Descrição do seu projeto">
             </div>
             <div class="project-custom">
                 <h2>Personalização</h2>
@@ -99,7 +110,455 @@ function excluirTarefa(btn){
 
             <button class="project-button">Salvar projeto</button>
         </div>
+
+        <div class="fourth">
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__code-editor">
+                    <div class="card__code-editor-area">
+                        <div class="circles">
+                            <div class="circle">1</div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <textarea>
+    let total_trfs = 0
+    function concluirTarefa(btn){
+        let trfs_conc = document.querySelector('.tarefas_concluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        <button id="btn_excl">Remover</button>
+        `
+        trfs_conc.append(li)
+    
+        let button = li.querySelector('button')
+        button.addEventListener('click', function(){
+            excluirTarefa(this)
+        })
+        atualizarTotais()
+    }
+    
+    function excluirTarefa(btn){
+        let trfs_excl = document.querySelector('.tarefas_excluidas')
+        let li = btn.parentElement
+        li.innerHTML = `
+        <span>${li.querySelector('span').textContent}</span>
+        `
+        trfs_excl.append(li)
+        atualizarTotais()
+    }</textarea>
+                    </div>
+                </div>
+
+                <div class="card__area">
+                    <div class="card__area-text">
+                        <h1 class="card__title">Título do projeto</h1>
+                        <p class="card__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+                    <div class="card__area-footer">
+                        <div class="reactions">
+                            <span><i class="fa-solid fa-comment" id="heart"></i> 9</span>
+                            <span><i class="fa-solid fa-heart" id="heart"></i> 9</span>
+                        </div>
+                        <div class="card__area-perfil perfil">
+                            <img src="../assets/perfil-logo.jpeg" alt="" class="card__area-perfil-img">
+                            <span>@Helder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
     </div>
+    <footer>
+        <p>Copyright &copy; 2025 - Todos os direitos reservados | Helder Mendes</p>
+    </footer>
 
     <script src="https://kit.fontawesome.com/cb103fc3d8.js" crossorigin="anonymous"></script>
 </body>
