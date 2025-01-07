@@ -7,45 +7,93 @@ header{
     gap: 20rem;
     margin: 2rem;
 
+    @media screen and (max-width:1600px) {
+        gap: 8rem;
+    }
+
+    @media screen and (max-width:480px) {
+        margin: 1rem;
+        gap: 0rem;               
+    }
+    
+
     .header__logo{
         width: 10%;
+
+        @media screen and (max-width:1600px) {
+            width: 20%;
+        }
+
+        @media screen and (max-width:480px){
+            width: 45%;
+        }
     }
 
     .header__input{
         font-size: variables.$font-size-m;
 
+        @media screen and (max-width:770px) {
+            padding: 1rem .5rem;
+        }
+
+        @media screen and (max-width:480px) {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            width: 90%;
+            top: 10%;
+        }
+
         &::placeholder{
             font-size: variables.$font-size-m;
             color: variables.$white;
             opacity: 16%;
-
-            
         }
     }
 
     .header__perfil{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 15.3%;
-        padding: 1rem;
-        border-radius: .5rem;
-        gap: 1.5rem;
-        transition: all .3s ease-in-out;
 
         .header__perfil-logo{
             border-radius: 50%;
             width: 30%;
         }
 
-        .header__perfil-nome{
-            font-size: variables.$font-size-l;
+        @media screen and (max-width:1600px) {
+            display: none;
         }
 
+    }
+}
+
+.menu-toggle-bar{
+    display: none;
+    
+    
+    i{
+        cursor: url('../../assets/cursor-pointer.png'),auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        transition: all ease-in-out .3s;
+
         &:hover{
-            cursor:url('../assets/cursor-pointer.png'), auto;
             background-color: variables.$blue-350;
-            transition: all .3s ease-in-out;
+            transition: all ease-in-out .3s;
+        }
+
+        &:nth-child(1){
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:1600px) {
+        display: block;
+        i{
+            @media screen and (max-width:480px){
+                &:nth-child(1){
+                    display: block;
+                }
+            }
         }
     }
 }
