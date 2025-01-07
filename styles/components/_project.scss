@@ -2,8 +2,14 @@
 
 .third{
     display: flex;
+    // display: none;
     flex-direction: column;
     gap: 2rem;
+
+    @media screen and (max-width:1600px) {
+        margin-top: 1rem;
+        width: 100%;
+    }
 
     .input{
         width: 105%;
@@ -14,6 +20,14 @@
             height: 80px;
         
         }
+
+        @media screen and (max-width:1600px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width:320px) {
+            font-size: variables.$font-size-s;   
+        }
     }
 
     .project{
@@ -21,6 +35,12 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+
+        input{
+            @media screen and (max-width:320px) {
+                width: 102%;
+            }
+        }
     }
 
     .project-custom{
@@ -29,10 +49,33 @@
         flex-direction: column;
         gap: 1.5rem;
 
+        @media screen and (max-width:1600px) {
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            h2{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;   
+        }
+
         .input{
             cursor:url('../assets/cursor-default.png'), auto;
             width: 113%;
             padding: 1rem;
+            @media screen and (max-width:1600px) {
+                width: 47%;
+            }
+
+            @media screen and (max-width:480px) {
+                width: 100%;
+            }
+
+            
         }
 
         select{
@@ -50,6 +93,13 @@
             padding: .6rem;
             border-radius: .5rem;
             width: 107%;
+            @media screen and (max-width:1600px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width:480px) {
+                width: 90%;
+            }
             
             input{
                 border: none;
@@ -57,6 +107,10 @@
                 width: 100%;
                 height: 50px;
                 border-radius: 1rem;
+
+                @media screen and (max-width:1600px) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -77,6 +131,14 @@
         background-color: variables.$blue-200;
         color: variables.$dark-gray;
         transition: all .3s ease-in-out;
+    }
+
+    @media screen and (max-width:1600px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width:480px) {
+        font-size: variables.$font-size-m;    
     }
 }
 
