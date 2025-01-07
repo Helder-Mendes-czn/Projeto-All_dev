@@ -5,11 +5,101 @@
     flex-direction: column;
     gap: 2rem;
 
+    .row-1{
+        display: none;
+    }
+
+    @media screen and (max-width:1600px) {
+        padding: 2rem;
+        background-color: variables.$dark-blue;
+        height: 100%;
+        width: 25%;
+        display: block;
+        display: none;
+        position: fixed; 
+        left: 100;
+        right: 0;
+        top: 10px; 
+        
+        @media screen and (max-width:480px){
+            width: 50%;
+            z-index: 999;
+        }
+
+        @media screen and (max-width:320px) {
+            padding: 1rem;   
+            width: 60%;
+        }
+
+        .row-1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            i{
+                cursor: url('../../assets/cursor-pointer.png'), auto;
+                margin-top: -3.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+                transition: all ease-in-out .3s;
+
+                &:hover{
+                    background-color: variables.$blue-350;
+                    transition: all ease-in-out .3s;
+                }
+            }
+        }
+
+        .menu__perfil{
+            justify-content: start;
+            width: 100%;
+            margin-bottom: 3rem;
+
+            @media screen and (max-width:480px){
+                gap: .2rem;
+            }
+
+            .menu__perfil-logo{
+                border-radius: 50%;
+                width: 20%;
+
+                @media screen and (max-width:480px){
+                    width: 35%;
+                }
+
+                @media screen and (max-width:320px) {
+                    width: 50%;
+                }
+            }
+
+            .menu__perfil-nome{
+                font-size: variables.$font-size-xl;
+
+                @media screen and (max-width:480px){
+                    font-size: variables.$font-size-l;
+                }
+
+                @media screen and (max-width:320px) {
+                    font-size: variables.$font-size-s;
+                }
+            }
+        }
+
+        h2{
+            margin-bottom: 1rem;
+        }
+    }
+
     .menu-sidebar__list{
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: .0.5rem;
+        gap: .05rem;
+
+        @media screen and (max-width:1600px) {
+            gap: 1rem;
+        }
 
         .menu-sidebar__list-item{
             cursor:url('../assets/cursor-pointer.png'), auto;
@@ -19,6 +109,13 @@
             border-radius: .5rem;
             gap: 1rem;
             transition: all .3s ease-in-out;
+
+            @media screen and (max-width:320px) {
+                gap: .2rem;
+                font-size: variables.$font-size-s;
+                padding: .25rem .5rem;
+            }
+
             & > div{
                 border-radius: 1rem;
                 padding: 1rem;
