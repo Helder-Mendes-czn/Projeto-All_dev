@@ -127,11 +127,13 @@
                 transition: all .3s ease-in-out;
             }
         }
-        .unselect{
-            opacity: 16%;
-            &:hover{
-                opacity: 1;
-            }
-        }
+        
+    }
+}
+
+.unselect{
+    opacity: 16%;
+    &:hover{
+        opacity: 1;
     }
 }
