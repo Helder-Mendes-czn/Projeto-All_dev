@@ -20,15 +20,18 @@
         left: 100;
         right: 0;
         top: 10px; 
-        
-        @media screen and (max-width:480px){
-            width: 50%;
+
+        @media screen and (max-width:760px){
+            width: 45%;
             z-index: 999;
         }
 
-        @media screen and (max-width:320px) {
-            padding: 1rem;   
+        @media screen and (max-width:480px){
             width: 60%;
+        }
+
+        @media screen and (max-width:320px){
+            width: 55%;
         }
 
         .row-1{
