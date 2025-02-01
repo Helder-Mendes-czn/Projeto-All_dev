@@ -719,6 +719,16 @@ footer {
   }
 }
 
+.input-mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .input-mobile {
+    display: block;
+    width: 30px;
+  }
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -804,5 +814,16 @@ html.click, html.click a, html.click a:hover, a:hover, button, input {
   }
   .input-text::placeholder {
     font-size: 0.8rem;
+  }
+}
+
+.input-mobile {
+  width: 90%;
+  margin: 1rem auto;
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .input-mobile {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
