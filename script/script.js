@@ -28,19 +28,19 @@ const community = document.querySelector('#community')
 code_editor__btn.addEventListener('click', function(){
     code_editor.style.display = 'block';
     code_editor__custom.style.display = 'block';
-    code_editor__btn.classList.remove = 'unselect';
+    code_editor__btn.classList.remove('unselect');
 
     community.style.display = 'none';
-    community__btn.classList.add = 'unselect';
+    community__btn.classList.add('unselect');
 })
 
 community__btn.addEventListener('click', function(){
     code_editor.style.display = 'none';
     code_editor__custom.style.display = 'none';
-    code_editor__btn.classList.add = 'unselect';
+    code_editor__btn.classList.add('unselect');
 
-    community.style.display = 'block';
-    community__btn.classList.remove = 'unselect';
+    community.style.display = 'flex';
+    community__btn.classList.remove('unselect');
 })
 
 
