@@ -43,4 +43,17 @@ community__btn.addEventListener('click', function(){
     community__btn.classList.remove('unselect');
 })
 
+// search-bar mobile
+
+const searchBarMobileBtn = document.querySelector('#search-bar__btn');
+searchBarMobileBtn.addEventListener('click', function(){
+    let searchBarMobile = document.querySelector('#search-bar__mobile');
+
+    if(searchBarMobile.style.display == 'none'){
+        searchBarMobile.style.display = 'block';
+    }else{
+        searchBarMobile.style.display = 'none';
+    }
+})
+
 
