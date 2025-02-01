@@ -2,10 +2,11 @@
 
 .fourth{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     display: none;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     width: 100%;
     gap: 2rem;
 
@@ -15,7 +16,7 @@
     }
 
     .card{
-        width: 45%;
+        width: 48.5%;
         background-color: variables.$blue-450;
         border-radius: 2.5rem;
         transition: all .3s ease-in-out;
