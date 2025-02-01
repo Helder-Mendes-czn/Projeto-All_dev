@@ -6,6 +6,7 @@
 @use './components/project';
 @use './components/community';
 @use './components/footer';
+@use './components/search-bar__mobile';
 @use './layout/container';
 
 
@@ -31,6 +32,8 @@ h2{
     background-color: variables.$blue-400;
     padding: 1.5rem;
     transition: all .3s ease-in-out;
+
+    
 
     &::placeholder{
         font-size: variables.$font-size-m;
@@ -78,5 +81,15 @@ html.click, html.click a, html.click a:hover, a:hover, button, input{
             @media screen and (max-width:480px) {
             font-size: variables.$font-size-xs;
         }
+    }
+}
+
+.input-mobile{
+    width: 90%;
+    margin: 1rem auto;
+    display: none;
+
+    @media screen and (max-width:480px) {
+        display: block;
     }
 }
