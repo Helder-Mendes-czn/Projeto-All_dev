@@ -131,16 +131,20 @@ header .header__perfil .header__perfil-logo {
     top: 10px;
   }
 }
+@media screen and (max-width: 1600px) and (max-width: 760px) {
+  .first {
+    width: 45%;
+    z-index: 999;
+  }
+}
 @media screen and (max-width: 1600px) and (max-width: 480px) {
   .first {
-    width: 50%;
-    z-index: 999;
+    width: 60%;
   }
 }
 @media screen and (max-width: 1600px) and (max-width: 320px) {
   .first {
-    padding: 1rem;
-    width: 60%;
+    width: 55%;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -244,10 +248,11 @@ header .header__perfil .header__perfil-logo {
   box-shadow: 0 0 5px 0px #5081fb;
   transition: all 0.3s ease-in-out;
 }
-.first .menu-sidebar__list .unselect {
+
+.unselect {
   opacity: 16%;
 }
-.first .menu-sidebar__list .unselect:hover {
+.unselect:hover {
   opacity: 1;
 }
 
@@ -411,6 +416,7 @@ header .header__perfil .header__perfil-logo {
 }
 .third .project-custom {
   padding: 0 2rem 0rem 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -438,7 +444,7 @@ header .header__perfil .header__perfil-logo {
 }
 @media screen and (max-width: 1600px) {
   .third .project-custom .input {
-    width: 47%;
+    width: 45%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -510,10 +516,9 @@ header .header__perfil .header__perfil-logo {
 
 .fourth {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   display: none;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   gap: 2rem;
 }
@@ -524,7 +529,7 @@ header .header__perfil .header__perfil-logo {
   }
 }
 .fourth .card {
-  width: 45%;
+  width: 48.5%;
   background-color: rgba(80, 129, 251, 0.0784313725);
   border-radius: 2.5rem;
   transition: all 0.3s ease-in-out;
